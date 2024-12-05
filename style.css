@@ -3,3 +3,17 @@ body {
     background-attachment: fixed;
     background-size: cover;
   }
+
+  .footer{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(100, 100, 100);
+  }
+
+  .FooterImg{
+    margin-left: 10px;
+  }
+
+  .main-header{
+    padding: 10px;
+  }
