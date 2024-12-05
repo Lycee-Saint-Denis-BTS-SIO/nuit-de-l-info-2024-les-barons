@@ -1,0 +1,5 @@
+body {
+    background-image: url(media/backgroundImg.webp);
+    background-attachment: fixed;
+    background-size: cover;
+  }
