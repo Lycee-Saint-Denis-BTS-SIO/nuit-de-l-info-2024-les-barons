@@ -1,5 +1,6 @@
 <?php
-include '/var/www/html/process/connectBdd.php';
+include_once '/var/www/html/process/connectBdd.php';
+include_once '/var/www/html/class/quiz.php';
 
 class user{
 
@@ -18,7 +19,8 @@ class user{
         $req = $bdd->prepare('INSERT INTO Utilisateur(`username`, `email`, `password`) VALUES(\''.$username.'\',\''.$email.'\',\''.$password.'\')');
         echo print_r($req);
         $req->execute();
-        
+        $lastId = $bdd->lastInsertId();
+        quiz::createPoint($lastId);
         return "ok";
     }
 
@@ -36,5 +38,13 @@ class user{
         $req->execute();
         $user = $req->fetchAll(PDO::FETCH_ASSOC);
         return $user;
+    }
+
+    static function getId($username){
+        $bdd = PDOMySQLConnector::getClient();
+        $req = $bdd->prepare('SELECT idUser FROM Utilisateur WHERE username = \''.$username.'\'');
+        $req->execute();
+        $user = $req->fetchAll(PDO::FETCH_ASSOC);
+        return $user[0]['idUser'];
     }
 }
