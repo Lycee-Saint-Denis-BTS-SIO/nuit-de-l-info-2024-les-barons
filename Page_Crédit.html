@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page de Crédit</title>
+  <style>
+    /* Style général de la page */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;  
+    }
+
+    /* Fond vidéo */
+    .background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Conteneur des crédits, aligné verticalement */
+    .credits-container {
+      text-align: center;
+      color: yellow;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    /* Style des noms dans la liste */
+    .credit-item {
+      opacity: 0;
+      animation: fadeInOut 5s forwards;
+      margin: 0.5rem 0;
+    }
+
+    /* Animation des noms */
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      20% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      80% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+    }
+
+    /* Délai progressif pour chaque nom */
+    .credit-item:nth-child(1) {
+      animation-delay: 0s;
+    }
+    .credit-item:nth-child(2) {
+      animation-delay: 1s;
+    }
+    .credit-item:nth-child(3) {
+      animation-delay: 2s;
+    }
+    .credit-item:nth-child(4) {
+      animation-delay: 3s;
+    }
+    .credit-item:nth-child(5) {
+      animation-delay: 4s;
+    }
+    .credit-item:nth-child(6) {
+      animation-delay: 5s;
+    }
+    .credit-item:nth-child(7) {
+      animation-delay: 6s;
+    }
+    .credit-item:nth-child(8) {
+      animation-delay: 7s;
+    }
+
+    /* Bouton */
+    .back-button {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, #4caf50, #81c784);
+      color: white;
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      z-index: 10;
+      font-family: Arial, sans-serif;
+    }
+
+    .back-button:hover {
+      background: linear-gradient(90deg, #81c784, #4caf50);
+      box-shadow: 0 0 15px rgba(0, 255, 127, 0.6);
+      transform: translateX(-50%) scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Vidéo de fond -->
+  <video class="background-video" autoplay muted loop>
+    <source src="videocredit.mp4" type="video/mp4">
+    Votre navigateur ne prend pas en charge la vidéo HTML5.
+  </video>
+
+  <!-- Conteneur des crédits -->
+  <div class="credits-container">
+    <div class="credit-item">Romain</div>
+    <div class="credit-item">Quentin</div>
+    <div class="credit-item">Jérémy</div>
+    <div class="credit-item">Nathan</div>
+    <div class="credit-item">Quentin</div>
+    <div class="credit-item">Hugo</div>
+    <div class="credit-item">Thomas</div>
+    <div class="credit-item">Clément</div>
+  </div>
+
+  <!-- Bouton pour revenir à une autre page -->
+  <a href="main.html" class="back-button">Retour à l'accueil</a>
+
+</body>
+</html>
