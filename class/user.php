@@ -1,6 +1,6 @@
 <?php
-include_once '/var/www/html/process/connectBdd.php';
-include_once '/var/www/html/class/quiz.php';
+include_once '/home/lanathomiedeposeidon/www/V6/process/connectBdd.php';
+include_once '/home/lanathomiedeposeidon/www/V6/class/quiz.php';
 
 class user{
 

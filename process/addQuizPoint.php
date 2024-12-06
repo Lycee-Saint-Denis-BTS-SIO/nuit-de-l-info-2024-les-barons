@@ -1,7 +1,7 @@
 <?php
 
-include_once '/var/www/html/class/quiz.php';
-include '/var/www/html/class/user.php';
+include_once '/home/lanathomiedeposeidon/www/V6/class/quiz.php';
+include '/home/lanathomiedeposeidon/www/V6/class/user.php';
 
 $username = $_POST['username'];
 $point = $_POST['point'];

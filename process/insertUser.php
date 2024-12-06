@@ -1,6 +1,6 @@
 <?php
 
-include '/var/www/html/class/user.php';
+include '/home/lanathomiedeposeidon/www/V6/class/user.php';
 
 //$data = json_decode(file_get_contents('php://input'), true);
 echo print_r($_POST);

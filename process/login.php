@@ -1,6 +1,6 @@
 <?php
 
-include '/var/www/html/class/user.php';
+include '/home/lanathomiedeposeidon/www/V6/class/user.php';
 
 $username = $_POST['username'];
 $password =$_POST['password'];
