@@ -3,6 +3,7 @@
     <head>
         <html lang="fr">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -19,11 +20,59 @@
             <h1 class="Title d-flex justify-content-center">L'anatomie de Poséidon</h1>
             <h2 class="d-flex justify-content-center">WIP</h2>
         </header>
-
-        <!-- Mettre le personage Ici! -->
-
+        <section class="sectionImg">
+        <div class="image-container">
+            <img class="base-image" src="vinci-icon-vetruvian-man-anatomie-vectorielle-du-corps-humain-2pjkhbe.jpg" alt="Vitruvian Man">
+            <img id="idCerveau" class="overlay-imageCerveau" src="Capture_d_écran_2024-12-05_213808-removebg-preview.png" alt="Overlay">
+            <img id="idCoeur" class="overlay-imageCoeur" src="coeur.png" alt="Overlay">
+            <img id="idPoumons" class="overlay-imagePoumons" src="poumons-removebg-preview.png" alt="Overlay">
+            <img id="idYeux" class="overlay-imageYeux" src="18745468-yeux-de-dessin-anime-simples-gratuit-vectoriel-removebg-preview.png" alt="Overlay">
+            <img id="idFoie" class="overlay-imageFoie" src="foie-removebg-preview.png" alt="Overlay">
+        </div>
+        <div id="heartModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <img src="field_media_image-1033979-CARTE_COURANTS_MARINS.jpg" alt="Heart Details" class="modal-image">
+              <p class="modal-text">Le cœur, avec son rythme constant et ses palpitations, est le moteur de la vie, tout comme les courants marins sont les veines de l'océan, transportant chaleur, nutriments et vie à travers le globe. Il y a une symétrie magnifique dans le fait que nos cœurs battent au rythme de ces courants invisibles.</p>
+            </div>
+          </div>
+        
+          <div id="cerveauModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <img src="profondeur-600x400.jpg" alt="Heart Details" class="modal-image">
+              <p class="modal-text">Le cerveau humain, avec ses mystères et ses profondeurs inexplorées, est comme les abîmes de l'océan où vivent des créatures étranges et des phénomènes encore peu compris. Tous deux sont des frontières de l'inconnu, nécessitant des expéditions audacieuses pour en comprendre la complexité.
+            </p>
+            </div>
+          </div>
+        
+          <div id="poumonsModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <img src="ocean-surface-1155087.jpg" alt="Poumons Details" class="modal-image">
+              <p class="modal-text">Les poumons échangent l'oxygène et le CO2, tout comme la surface de l'océan échange du gaz avec l'atmosphère. Là où les poumons sont la frontière entre l'intérieur et l'extérieur de notre corps, l'océan est la frontière entre le terrestre et l'aquatique, respirant avec les marées et les vagues.
+            </p>
+            </div>
+          </div>
+        
+          <div id="yeuxModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <img src="crvette-pistolet.jpg" alt="Poumons Details" class="modal-image">
+              <p class="modal-text">Si c'est un peu plus fantaisiste, pensez aux yeux de l'homme, capables de voir une gamme de couleurs, en comparaison avec les crevettes pistol, qui possèdent des yeux parmi les plus complexes du monde animal, capables de voir des spectres de lumière que nous ne pouvons même pas imaginer. C'est comme si l'océan avait voulu nous montrer que la vision peut être bien plus fantastique qu'on ne le pense.</p>
+            </div>
+          </div>
+        
+          <div id="foieModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <img src="mangroves-5205415_1920.jpg" alt="Poumons Details" class="modal-image">
+              <p class="modal-text">Le foie, avec sa capacité à filtrer et à nettoyer le sang, peut être comparé aux mangroves, ces écosystèmes côtiers qui agissent comme des filtres naturels pour l'eau, retenant les sédiments, les polluants et aidant à purifier l'eau qui retourne dans l'océan.</p>
+            </div>
+          </div>
+          </section>
         <footer>
-            <div class="footer text-white text-center text-lg-start fixed-bottom">
+            <div class="footer text-white text-center text-lg-start">
                 <div class="d-flex justify-content-center">
                     <img
                     class="FooterImg Lyceelogo"
@@ -60,3 +109,41 @@
     </body>
 </html>
 <!-- Voire si ça marche -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    // Liste des organes et leur correspondance modale
+    const organs = [
+        { idImage: 'idCoeur', idModal: 'heartModal' },
+        { idImage: 'idCerveau', idModal: 'cerveauModal' },
+        { idImage: 'idPoumons', idModal: 'poumonsModal' },
+        { idImage: 'idYeux', idModal: 'yeuxModal' },
+        { idImage: 'idFoie', idModal: 'foieModal' }
+    ];
+
+    // Boucle sur chaque organe pour gérer les événements
+    organs.forEach((organ) => {
+        const imageElement = document.getElementById(organ.idImage);
+        const modalElement = document.getElementById(organ.idModal);
+        const closeElement = modalElement.querySelector('.close');
+
+        // Affiche la modale au clic sur l'image
+        imageElement.onclick = function () {
+            modalElement.style.display = 'block';
+        };
+
+        // Ferme la modale au clic sur la croix
+        closeElement.onclick = function () {
+            modalElement.style.display = 'none';
+        };
+
+        // Ferme la modale au clic en dehors de celle-ci
+        modalElement.onclick = function (event) {
+            if (event.target === modalElement) { // Vérifie que le clic est sur l'arrière-plan
+                modalElement.style.display = 'none';
+            }
+        };
+    });
+});
+
+</script>
