@@ -103,7 +103,7 @@
             closeButton: true,
             progressBar: true,
           });
-          window.location.replace('main.html')
+          window.location.replace('index.html')
         } else {
           toastr.warning('Vous vous êtes trompé de mot de passe, votre mot de passe est "' + data[0]['password'] + '"', 'Dommage !', {
             timeOut: 5000,
