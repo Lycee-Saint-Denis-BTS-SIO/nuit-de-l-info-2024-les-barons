@@ -13,6 +13,7 @@
 
         <script src="script.js"></script>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>L'anatomie de Poséidon</title>
     </head>
     <body>
@@ -32,6 +33,7 @@
         <div id="heartModal" class="modal">
             <div class="modal-content">
               <span class="close">&times;</span>
+              <h4>Les courants marins, les cœur de Poséidon</h4>
               <img src="field_media_image-1033979-CARTE_COURANTS_MARINS.jpg" alt="Heart Details" class="modal-image">
               <p class="modal-text">Le cœur, avec son rythme constant et ses palpitations, est le moteur de la vie, tout comme les courants marins sont les veines de l'océan, transportant chaleur, nutriments et vie à travers le globe. Il y a une symétrie magnifique dans le fait que nos cœurs battent au rythme de ces courants invisibles.</p>
             </div>
@@ -40,6 +42,7 @@
           <div id="cerveauModal" class="modal">
             <div class="modal-content">
               <span class="close">&times;</span>
+              <h4>Le abîmes, les cerveau de Poséidon</h4>
               <img src="profondeur-600x400.jpg" alt="Heart Details" class="modal-image">
               <p class="modal-text">Le cerveau humain, avec ses mystères et ses profondeurs inexplorées, est comme les abîmes de l'océan où vivent des créatures étranges et des phénomènes encore peu compris. Tous deux sont des frontières de l'inconnu, nécessitant des expéditions audacieuses pour en comprendre la complexité.
             </p>
@@ -49,6 +52,7 @@
           <div id="poumonsModal" class="modal">
             <div class="modal-content">
               <span class="close">&times;</span>
+              <h4>La surface océanique, les poumons de Poséidon</h4>
               <img src="ocean-surface-1155087.jpg" alt="Poumons Details" class="modal-image">
               <p class="modal-text">Les poumons échangent l'oxygène et le CO2, tout comme la surface de l'océan échange du gaz avec l'atmosphère. Là où les poumons sont la frontière entre l'intérieur et l'extérieur de notre corps, l'océan est la frontière entre le terrestre et l'aquatique, respirant avec les marées et les vagues.
             </p>
@@ -58,6 +62,7 @@
           <div id="yeuxModal" class="modal">
             <div class="modal-content">
               <span class="close">&times;</span>
+              <h4>Les crevettes pistol, les yeux de Poséidon</h4>
               <img src="crvette-pistolet.jpg" alt="Poumons Details" class="modal-image">
               <p class="modal-text">Si c'est un peu plus fantaisiste, pensez aux yeux de l'homme, capables de voir une gamme de couleurs, en comparaison avec les crevettes pistol, qui possèdent des yeux parmi les plus complexes du monde animal, capables de voir des spectres de lumière que nous ne pouvons même pas imaginer. C'est comme si l'océan avait voulu nous montrer que la vision peut être bien plus fantastique qu'on ne le pense.</p>
             </div>
@@ -66,6 +71,7 @@
           <div id="foieModal" class="modal">
             <div class="modal-content">
               <span class="close">&times;</span>
+              <h4>Les mangroves, le Foie de Poséidon</h4>
               <img src="mangroves-5205415_1920.jpg" alt="Poumons Details" class="modal-image">
               <p class="modal-text">Le foie, avec sa capacité à filtrer et à nettoyer le sang, peut être comparé aux mangroves, ces écosystèmes côtiers qui agissent comme des filtres naturels pour l'eau, retenant les sédiments, les polluants et aidant à purifier l'eau qui retourne dans l'océan.</p>
             </div>
@@ -77,30 +83,27 @@
                     <img
                     class="FooterImg Lyceelogo"
                     src="media/lyceesaintdenis.png"
-                    alt="Grapefruit slice atop a pile of other slices"
-                    style="width: 100px;" />
+                    alt="Grapefruit slice atop a pile of other slices" />
     
                     <img
                     class="FooterImg NuitInfo"
                     src="media/nuit-info.png"
-                    alt="Grapefruit slice atop a pile of other slices" 
-                    style="width: 100px;"/>
+                    alt="Grapefruit slice atop a pile of other slices"/>
     
                     <img
                     class="FooterImg AssosImg"
                     src="media/Race_for_Water_Foundation_-_Logo.svg.png"
-                    alt="Grapefruit slice atop a pile of other slices" 
-                    style="height: 100px;"/>
+                    alt="Grapefruit slice atop a pile of other slices"/>
                 </div>
                 <p class="BaronText"><u>Site par La legion des Barons:</u></p>
-                <div class="d-flex justify-content-center">
-                    <p>BONNETON Hugo</p>
-                    <p>CHIRAT Quentin</p>
-                    <p>DAUGA Nathan</p>
-                    <p>DESCORMES Romain</p>
-                    <p>HUGUET Jeremy</p>
-                    <p>LOPEZ Thomas</p>
-                    <p>Pradon Clement</p>
+                <div class="CreditNames d-flex justify-content-center">
+                    <p class="CreditName">BONNETON Hugo</p>
+                    <p class="CreditName">CHIRAT Quentin</p>
+                    <p class="CreditName">DAUGA Nathan</p>
+                    <p class="CreditName">DESCORMES Romain</p>
+                    <p class="CreditName">HUGUET Jeremy</p>
+                    <p class="CreditName">LOPEZ Thomas</p>
+                    <p class="CreditName">Pradon Clement</p>
     
                 </div>
                 <a href="Page_Crédit.html" class="btn btn-primary btn-lg credit-button">Crédits</a>
@@ -126,6 +129,7 @@
         const imageElement = document.getElementById(organ.idImage);
         const modalElement = document.getElementById(organ.idModal);
         const closeElement = modalElement.querySelector('.close');
+
 
         // Affiche la modale au clic sur l'image
         imageElement.onclick = function () {

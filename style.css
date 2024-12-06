@@ -14,6 +14,7 @@ body {
 
   .FooterImg{
     margin-left: 10px;
+    height: 100px;
   }
 
   .main-header{
@@ -37,4 +38,20 @@ body {
     background: linear-gradient(90deg, #0056b3, #003f7f);
     transform: scale(1.1);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.CreditName{
+    padding: 10px;
+}
+
+@media (max-width: 768px){
+    .FooterImg {
+        height: 80px;
+    }
+    .CreditNames {
+        font-size: smaller;
+    }
+    .CreditName{
+        padding: 0px;
+    }
 }

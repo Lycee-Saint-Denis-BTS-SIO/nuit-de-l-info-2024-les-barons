@@ -86,10 +86,10 @@
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
+    border: 5px solid #888 !important;
     width: 80%; /* Could be more or less, depending on screen size */
     max-width: 600px;
-    border-radius: 10px;
+    border-radius: 20px !important;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   }
   
