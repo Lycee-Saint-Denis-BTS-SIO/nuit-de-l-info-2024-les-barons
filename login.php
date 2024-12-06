@@ -10,8 +10,8 @@
 
 </head>
 <body>
-<script src="http://code.jquery.com/jquery-2.0.3.min.js" ></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.0.3.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
   <div class="wrapper">
     <div class="title"><span>L'anathomie de Poséidon</span></div>
     <form action="#" id="login-form">
